@@ -15,6 +15,7 @@
 		0941E9D2251C7B4100FFE406 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0941E9D0251C7B4100FFE406 /* LaunchScreen.storyboard */; };
 		0941E9DD251C7B4200FFE406 /* SwiftUIXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E9DC251C7B4200FFE406 /* SwiftUIXTests.swift */; };
 		0941E9E8251C7B4200FFE406 /* SwiftUIXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941E9E7251C7B4200FFE406 /* SwiftUIXUITests.swift */; };
+		0941EA71252201EE00FFE406 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941EA70252201EE00FFE406 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0941E9E3251C7B4200FFE406 /* SwiftUIXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0941E9E7251C7B4200FFE406 /* SwiftUIXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIXUITests.swift; sourceTree = "<group>"; };
 		0941E9E9251C7B4200FFE406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0941EA70252201EE00FFE406 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				0941E9C5251C7B3F00FFE406 /* AppDelegate.swift */,
 				0941E9C7251C7B3F00FFE406 /* SceneDelegate.swift */,
 				0941E9C9251C7B3F00FFE406 /* ContentView.swift */,
+				0941EA70252201EE00FFE406 /* PostCell.swift */,
 				0941E9CB251C7B4100FFE406 /* Assets.xcassets */,
 				0941E9D0251C7B4100FFE406 /* LaunchScreen.storyboard */,
 				0941E9D3251C7B4100FFE406 /* Info.plist */,
@@ -269,6 +272,7 @@
 				0941E9C6251C7B3F00FFE406 /* AppDelegate.swift in Sources */,
 				0941E9C8251C7B3F00FFE406 /* SceneDelegate.swift in Sources */,
 				0941E9CA251C7B3F00FFE406 /* ContentView.swift in Sources */,
+				0941EA71252201EE00FFE406 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
