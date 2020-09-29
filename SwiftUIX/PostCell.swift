@@ -9,7 +9,17 @@ import SwiftUI
 
 struct PostCell: View {
     var body: some View {
-        HStack(){
+        HStack(spacing: 5.0){
+            Image(uiImage: UIImage(named: "8697cf1ely8gashxj3b09j20u00u040v.jpg")!)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 50, height: 50, alignment: .center)
+                .clipShape(Circle())
+                .overlay(
+                    PostVipBage()
+                        .offset(x: 16.0, y: 16.0)
+                )
+                
             VStack (alignment: .leading, spacing: 5.0){
                 Text("用户昵称")
                     .font(Font.system(size:16.0))
@@ -21,6 +31,7 @@ struct PostCell: View {
                     .foregroundColor(.gray)
                 
             }
+            .padding(.leading,10)
             
             Spacer()
             
