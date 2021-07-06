@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct PostList: Codable {
+struct PostList: Codable{
     var list : [Post]
 }
 
 //model 数据模型 不继承与View
-struct Post: Codable {
+struct Post: Codable,Identifiable {
     let id: Int
     let avatar: String // image name
     let vip: Bool
@@ -29,12 +29,34 @@ struct Post: Codable {
     var isLiked: Bool
 }
 
+extension Post {
+    var commentText:String {
+        if commentCount <= 0 {
+            return "评论"
+        }
+        if commentCount < 1000 {
+            return "\(commentCount)"
+        }
+        
+        return String(format: "%.1fK", Double(commentCount/1000))
+    }
+    
+    var likeText:String {
+        if likeCount <= 0 {
+            return "点赞"
+        }
+        if likeCount < 1000 {
+            return "\(likeCount)"
+        }
+        return String(format: "%.1fK", Double(likeCount/1000))
+    }
+}
 
 let postList = loadPostListData(fileName: "PostListData_hot_1.json")
 
 func loadPostListData (fileName :String) -> PostList {
     guard let url = Bundle.main.url(forResource: fileName, withExtension: nil) else  {
-        fatalError("cant not file name data")
+        fatalError("cant not file name data \(fileName)")
     }
     
     guard let data = try? Data(contentsOf: url) else {
@@ -46,6 +68,8 @@ func loadPostListData (fileName :String) -> PostList {
     }
     
     return list
-    
-    
+}
+
+func loadImage(name:String) -> Image {
+    return Image(uiImage: UIImage(named: name)!)
 }

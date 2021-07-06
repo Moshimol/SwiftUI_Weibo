@@ -51,18 +51,49 @@ struct PostCell: View {
                                     .stroke(Color.orange,lineWidth: 1.0)
                             )
                     })
+                    .buttonStyle(BorderlessButtonStyle())
                 }
             }
             
             Text(post.text)
                 .font(Font.system(size:17))
+            
+            if !post.images.isEmpty {
+                loadImage(name: post.images[0])
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width-30.0, height: (UIScreen.main.bounds.width-30.0) * 0.75)
+                    .clipped()
+            }
+            Divider()
+            
+            HStack(spacing:0) {
+                Spacer()
+                PostCellToolbarButton(image: "message", text: post.commentText, color: .black) {
+                    print("click button")
+                }
+                
+                Spacer()
+                
+                PostCellToolbarButton(image: "heart", text: post.likeText, color:.black) {
+                    
+                }
+                
+                Spacer()
+            }
+            Rectangle()
+                .padding(.horizontal,-15)
+                .frame(height:10)
+                .foregroundColor(Color(red: 238/255, green: 238/255, blue: 238/255))
         }
+       
         .padding(.horizontal, 15)
+        .padding(.top, 15)
     }
 }
 
 struct PostCell_Previews: PreviewProvider {
     static var previews: some View {
-        PostCell(post: postList.list[2])
+        PostCell(post: postList.list[4])
     }
 }
