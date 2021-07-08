@@ -104,7 +104,11 @@
 		0941EA71252201EE00FFE406 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941EA70252201EE00FFE406 /* PostCell.swift */; };
 		0962B4F52695FF7700C4F4D6 /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0962B4F42695FF7700C4F4D6 /* PostListView.swift */; };
 		0962B4FA2695FFAA00C4F4D6 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0962B4F92695FFAA00C4F4D6 /* PostDetailView.swift */; };
+		0962B50A269607CD00C4F4D6 /* HomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0962B509269607CD00C4F4D6 /* HomeNavigationBar.swift */; };
 		0989D58C2695F61400C5EE8C /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0989D58B2695F61400C5EE8C /* PostImageCell.swift */; };
+		09B6B218269746490070DFD2 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B6B217269746490070DFD2 /* UserData.swift */; };
+		09B6B21D26974A730070DFD2 /* HScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B6B21C26974A730070DFD2 /* HScrollViewController.swift */; };
+		09F58F6B2696D8C900992E6F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F58F6A2696D8C900992E6F /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,7 +232,11 @@
 		0941EA70252201EE00FFE406 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		0962B4F42695FF7700C4F4D6 /* PostListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
 		0962B4F92695FFAA00C4F4D6 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
+		0962B509269607CD00C4F4D6 /* HomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationBar.swift; sourceTree = "<group>"; };
 		0989D58B2695F61400C5EE8C /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
+		09B6B217269746490070DFD2 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		09B6B21C26974A730070DFD2 /* HScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HScrollViewController.swift; sourceTree = "<group>"; };
+		09F58F6A2696D8C900992E6F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,12 +381,16 @@
 				0941E9C7251C7B3F00FFE406 /* SceneDelegate.swift */,
 				0941E9C9251C7B3F00FFE406 /* ContentView.swift */,
 				0989D58B2695F61400C5EE8C /* PostImageCell.swift */,
+				0962B509269607CD00C4F4D6 /* HomeNavigationBar.swift */,
 				0941EA70252201EE00FFE406 /* PostCell.swift */,
 				091B4018252350E700C3C545 /* PostVipBage.swift */,
 				091B401D2523521A00C3C545 /* Post.swift */,
 				0962B4F42695FF7700C4F4D6 /* PostListView.swift */,
 				0926BF112694AFEE002BDCDD /* PostCellToolbarButton.swift */,
 				0962B4F92695FFAA00C4F4D6 /* PostDetailView.swift */,
+				09F58F6A2696D8C900992E6F /* HomeView.swift */,
+				09B6B217269746490070DFD2 /* UserData.swift */,
+				09B6B21C26974A730070DFD2 /* HScrollViewController.swift */,
 				0941E9CB251C7B4100FFE406 /* Assets.xcassets */,
 				0941E9D0251C7B4100FFE406 /* LaunchScreen.storyboard */,
 				0941E9D3251C7B4100FFE406 /* Info.plist */,
@@ -627,6 +639,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B6B218269746490070DFD2 /* UserData.swift in Sources */,
+				0962B50A269607CD00C4F4D6 /* HomeNavigationBar.swift in Sources */,
+				09B6B21D26974A730070DFD2 /* HScrollViewController.swift in Sources */,
 				091B4019252350E700C3C545 /* PostVipBage.swift in Sources */,
 				0962B4FA2695FFAA00C4F4D6 /* PostDetailView.swift in Sources */,
 				0941E9C6251C7B3F00FFE406 /* AppDelegate.swift in Sources */,
@@ -635,6 +650,7 @@
 				0926BF122694AFEE002BDCDD /* PostCellToolbarButton.swift in Sources */,
 				091B401E2523521A00C3C545 /* Post.swift in Sources */,
 				0941E9CA251C7B3F00FFE406 /* ContentView.swift in Sources */,
+				09F58F6B2696D8C900992E6F /* HomeView.swift in Sources */,
 				0989D58C2695F61400C5EE8C /* PostImageCell.swift in Sources */,
 				0941EA71252201EE00FFE406 /* PostCell.swift in Sources */,
 			);
