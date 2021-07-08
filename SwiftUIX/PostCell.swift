@@ -82,7 +82,6 @@ struct PostCell: View {
                 .frame(height:10)
                 .foregroundColor(Color(red: 238/255, green: 238/255, blue: 238/255))
         }
-       
         .padding(.horizontal, 15)
         .padding(.top, 15)
     }
