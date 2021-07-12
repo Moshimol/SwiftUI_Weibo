@@ -10,18 +10,11 @@ import SwiftUI
 struct PostListView: View {
     let category:PostListCategory
     
-    var postList: PostList {
-        switch category {
-            case .recommend:
-                return loadPostListData(fileName: "PostListData_recommend_1.json")
-            case .hot:
-                return loadPostListData(fileName: "PostListData_hot_1.json") 
-        }
-    }
+    @EnvironmentObject var userData: UserData
     
     var body: some View {
         List {
-            ForEach(self.postList.list) { post in
+            ForEach(userData.postList(for: category).list) { post in
                 ZStack {
                     PostCell(post: post)
                     NavigationLink(destination: PostDetailView(post: post)){

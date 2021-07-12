@@ -52,8 +52,6 @@ extension Post {
     }
 }
 
-let postList = loadPostListData(fileName: "PostListData_hot_1.json")
-
 func loadPostListData (fileName :String) -> PostList {
     guard let url = Bundle.main.url(forResource: fileName, withExtension: nil) else  {
         fatalError("cant not file name data \(fileName)")
