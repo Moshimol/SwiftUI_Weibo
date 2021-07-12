@@ -8,10 +8,17 @@
 import SwiftUI
 
 struct PostCell: View {
-    let post : Post
+    let post:Post
+    
+    @EnvironmentObject var userData: UserData
+    
+    var bindPostLPost:Post {
+        userData.post(forId: post.id)!
+    }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 5.0) {
+        var post = bindPostLPost
+         return VStack(alignment: .leading, spacing: 5.0) {
             HStack(spacing: 5.0){
                 Image(uiImage: UIImage(named: post.avatar)!)
                     .resizable()
@@ -40,7 +47,8 @@ struct PostCell: View {
                     Spacer()
                     
                     Button(action: {
-                        print("follow buttton")
+                        post.isFollowed = true
+                        self.userData.update(post)
                     }, label: {
                         Text("关注")
                             .font(Font.system(size:11.0))
@@ -71,8 +79,15 @@ struct PostCell: View {
                 
                 Spacer()
                 
-                PostCellToolbarButton(image: "heart", text: post.likeText, color:.black) {
-                    
+                PostCellToolbarButton(image: post.isLiked ? "heart.fill":"heart", text: post.likeText, color:post.isLiked ? .red : .black) {
+                    if post.isLiked {
+                        post.isLiked = false
+                        post.likeCount -= 1
+                    } else {
+                        post.isLiked = true
+                        post.likeCount += 1
+                    }
+                    self.userData.update(post)
                 }
                 
                 Spacer()
@@ -89,6 +104,8 @@ struct PostCell: View {
 
 struct PostCell_Previews: PreviewProvider {
     static var previews: some View {
-        PostCell(post: postList.list[4])
+        let userData = UserData()
+        
+        return PostCell(post: userData.recommendPostList.list[0]).environmentObject(userData)
     }
 }
