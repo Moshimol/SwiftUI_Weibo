@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct PostCell: View {
-    let post:Post
+    let post: Post
+        
+    @State var presentComment: Bool = false
     
-    @EnvironmentObject var userData: UserData
-    
-    var bindPostLPost:Post {
+    var bindingPost: Post {
         userData.post(forId: post.id)!
     }
     
+    @EnvironmentObject var userData: UserData
+    
     var body: some View {
-        var post = bindPostLPost
+        var post = bindingPost
          return VStack(alignment: .leading, spacing: 5.0) {
             HStack(spacing: 5.0){
                 Image(uiImage: UIImage(named: post.avatar)!)
@@ -75,6 +77,11 @@ struct PostCell: View {
                 Spacer()
                 PostCellToolbarButton(image: "message", text: post.commentText, color: .black) {
                     print("click button")
+                    self.presentComment = true
+                }
+                .sheet(isPresented: $presentComment) {
+                    CommentInputView(post: post)
+                                            .environmentObject(self.userData)
                 }
                 
                 Spacer()
